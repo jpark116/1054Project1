@@ -171,3 +171,147 @@ ul li a:hover {
                padding-bottom: 8px;
 
 }
+
+/*--------------MAIN------------ */
+/* 1.add a left and right border along all main content.
+    2. set a max width.
+    3. set background color.
+     */
+     main {
+               color: var(--color-darkerpurple);
+               border-right: 5px solid var(--color-lightcoffee);
+               border-left: 5px solid var(--color-lightcoffee);
+               max-width: 1400px;
+               margin: 0 auto;
+}
+
+/* style links inside of main. */
+main a {
+               text-decoration: none;
+               color: var(--color-coffee);
+}
+
+/* hover underline effect. */
+main a:hover {
+               text-decoration: underline;
+               cursor: pointer;
+
+}
+
+/* 1. set background position and size as well as center text for coffee bean bullet point effect.
+    2. set background image repeat to off
+    3. sizing and font styling of title.
+    4. blend background of coffee bean image to match main background.
+     */
+main h2 {
+               font-family: var(--font-title);
+               font-size: 2rem;
+               margin-bottom: 20px;
+               padding-top: 20px;
+               width: 345px;
+               margin-left: 10%;
+               background-image: var(--icon-image);
+               background-position: left;
+               background-size: 40px;
+               background-repeat: no-repeat;
+               text-align: center;
+               mix-blend-mode: multiply;
+}
+/*--------------ABOUT------------ */
+/*set background and padding of section. */
+#about {
+               background-color: var(--color-lighticyblue);
+               padding-top: 3%;
+               padding-bottom: 5%;
+}
+
+/* Coffee cup placement in background with .1 opacity and absolute placement and z index so it is behind content.*/
+#about::before {
+               content: var(--coffee-cup);
+               position: absolute;
+               top: 50%;
+               left: 55%;
+               opacity: 0.1;
+               z-index: -1;
+
+}
+/* set size of title and background size of coffee bean.*/
+#about>section:nth-of-type(2) h2 {
+               width: 620px;
+               background-size: 45px;
+}
+
+/* 1. set spacing for paragraphs in about section.
+    2. set colors and borders.
+    */
+#about>section>p {
+               margin: 0 10%;
+               padding: 20px 20px;
+               background-color: var(--color-lightbabyblue);
+               border: 3px solid var(--color-babyblue);
+               font-weight: bold;
+}
+
+/* take out top and bottom of borders of first and second paragraph so two paragraphs share the same border. */
+#about>section>p:nth-of-type(1) {
+               border: 3px solid var(--color-babyblue);
+               border-bottom: none;
+}
+
+#about>section>p:nth-of-type(2) {
+               border: 3px solid var(--color-babyblue);
+               border-top: none;
+}
+
+
+/* style block quote and give it shadow for effect. */
+blockquote {
+               outline: 4px solid var(--color-darkpurple);
+               background-color: var(--color-lightpurple);
+               box-shadow: 10px 10px 10px var(--color-darkpurple);
+               margin: 0 10%;
+               padding: 10px 10px;
+               margin-bottom: 5%;
+               margin-top: 5%;
+}
+
+/* 1. use flex and allow wrapping for modern css example list.
+    2. add background color and a bottom border.
+    3. add padding and margin.  */
+#about ul {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+               gap: 10px;
+               margin: 0 10%;
+               padding: 3% 1%;
+               background-size: 100%;
+               background-repeat: no-repeat;
+               background-color: var(--color-lightcoffee);
+               border-bottom: 5px solid var(--color-coffee);
+}
+/* 1. take out list style.
+    2. add border image to the list items.
+    3. set width spacing and border sizing options for each list item. */
+#about ul li {
+               list-style: none;
+               font-size: .8rem;
+               color: var(--color-darkerpurple);
+               background-color: var(--color-mayablue);
+               padding: 10px 0;
+               width: 220px;
+               border: 4px solid;
+               border-image-slice: 50;
+               border-image-source: url('https://media.istockphoto.com/id/2167328245/vector/coffee-bean-pattern-on-dark-brown-background-design.jpg?s=612x612&w=0&k=20&c=vtOzSz2wRXbi8YdXFh8--A69GokccWJlV-3KzWXHYy4=');
+               font-weight: bold;
+               background-color: var(--color-lightcoffee)
+}
+
+/* set background color of  */
+#about section:nth-of-type(2) p:nth-of-type(2) {
+               background-color: var(--color-lightcoffee);
+               border: none;
+               border-top: 5px solid var(--color-coffee);
+               text-align: center;
+               padding-bottom: 0;
+}
