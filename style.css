@@ -2,7 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Ovo&family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Ovo&family=Sacramento&display=swap');
 
-/* fix line height for various elelments. */
+html {
+               box-sizing: border-box;
+               font-size: 20px;
+               font-family: var(--font-secondary);
+}
+
+*,
+*::before,
+*::after {
+               box-sizing: inherit;
+               margin: 0;
+               padding: 0;
+}
+
+/* line height changes for most text elements. */
 h2,
 h3,
 h4,
@@ -15,9 +29,145 @@ h3 {
                text-decoration: underline 2px solid var(--color-darkerpurple);
 }
 
-/* Apply flexbox column to body and default background color */
+/* default styling for the body setting flex */
 body {
                background-color: var(--color-lightbabyblue);
-               display:flex;
+               display: flex;
                flex-direction: column;
+}
+
+/* default styling for all links on the page. */
+body a {
+               color: var(--color-coffee);
+               text-decoration: none;
+               font-weight: 700;
+}
+
+/* default skip link is hidden. */
+.skip-link {
+               position: absolute;
+               top: 0;
+               left: -100%;
+}
+
+/* only allow skip link to show when in focus. */
+.skip-link:focus {
+               left: 0;
+}
+
+/* give general styling for all strong elements. */
+strong {
+               color: var(--color-darkerpurple);
+               font-size: 1.2rem;
+               padding: 2px;
+}
+
+/* add projects core colors and fonts/images. */
+:root {
+               --color-icyblue: #b7d3f2;
+               --color-lighticyblue: rgba(183, 211, 242, .5);
+               --color-babyblue: #84afe6;
+               --color-lightbabyblue: rgba(132, 175, 230, .5);
+               --color-mayablue: rgb(121, 190, 238);
+               --color-lightmayablue: rgba(121, 190, 238, .5);
+               --color-lightpurple: rgb(175, 175, 220);
+               --color-superlightpurple: rgba(175, 175, 220, .5);
+               --color-darkpurple: rgb(138, 132, 226);
+               --color-lightdarkpurple: rgba(138, 132, 226, .5);
+               --color-darkerpurple: rgb(53, 6, 62);
+               --color-coffee: #6f4e37;
+               --color-lightcoffee: rgba(111, 78, 55, 0.502);
+
+               --font-primary: 'Mulish', serif;
+               --font-secondary: 'Ovo', serif;
+               --font-title: 'Sacramento', cursive;
+               --icon-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzrsKvdmjCOjwHhra3V3tq4pXSuCs6Vh66eQ&s');
+               --coffee-cup: url('https://png.pngtree.com/png-clipart/20230811/original/pngtree-isolated-vector-drawing-of-a-steaming-hot-cup-of-coffee-or-tea-using-pencil-technique-vector-picture-image_10412050.png');
+}
+
+
+/* Change size of link image. */
+svg {
+               width: 12px;
+}
+
+/*--------------HEADER------------ */
+/* 1. display flex.
+    2. add background and bottom border.
+    3. padding and spacing and text formatting. */
+header div {
+               display: flex;
+               flex-direction: column;
+               background-color: var(--color-lightbabyblue);
+               padding: 15px 30px;
+               border-bottom: 12px solid var(--color-lightpurple);
+               gap: 10px;
+               text-align: center;
+}
+
+/* style title */
+/* 1. set h1 font family.
+    2. styling and getting rid of header default margin.*/
+header h1 {
+               font-family: var(--font-primary);
+               color: var(--color-darkpurple);
+               margin: 0;
+               font-size: 3rem;
+}
+/* header formatting. */
+header h2 {
+               font-family: var(--font-title);
+               letter-spacing: normal;
+}
+
+/* lessen size of paragraph font. */
+header p {
+               font-size: .8rem;
+}
+
+
+/*--------------NAV------------ */
+/* 1. background color and border bottom only.
+    2. spacing. */
+nav {
+               background-color: var(--color-lightbabyblue);
+               border-bottom: 10px solid var(--color-lightpurple);
+               padding: 0% 8%;
+}
+
+/* 1. makle main navigation links flex row.
+    2. spacing between.
+    3. take out list styling.
+ */
+nav ul {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+               list-style: none;
+}
+
+/* nav links spacing formatting. */
+ul li {
+               gap: 15px;
+               min-width: 128px;
+               text-align: center;
+}
+
+/* 1. get rid of link underlines.
+    2. make larger area of links clickable with display block.
+    3. font styling and padding. */
+ul li a {
+               text-decoration: none;
+               font-family: var(--font-primary);
+               font-weight: 700;
+               color: var(--color-coffee);
+               display: block;
+               padding: 20px;
+}
+
+/* Hover over effect for links to show underline when hovered. */
+ul li a:hover {
+               border-bottom: 3px solid var(--color-coffee);
+               padding-bottom: 8px;
+
 }
