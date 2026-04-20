@@ -1,3 +1,8 @@
+/* reference */
+/* mix-blend-mode /  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mix-blend-mode. */
+/*background image generator / https://heropatterns.com/ */ 
+
+
 /* import my main fonts. */
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Ovo&family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alice&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Ovo&family=Sacramento&display=swap');
@@ -203,6 +208,7 @@ main a:hover {
     2. set background image repeat to off
     3. sizing and font styling of title.
     4. blend background of coffee bean image to match main background.
+    -- got mix-blend-mode from https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mix-blend-mode.
      */
 main h2 {
                font-family: var(--font-title);
