@@ -76,7 +76,7 @@ strong {
                --color-lightdarkpurple: rgba(138, 132, 226, .5);
                --color-darkerpurple: rgb(53, 6, 62);
                --color-coffee: #6f4e37;
-               --color-lightcoffee: rgba(111, 78, 55, 0.502);
+               --color-lightcoffee: rgba(111, 78, 55, 0.6);
 
                --font-primary: 'Mulish', serif;
                --font-secondary: 'Ovo', serif;
@@ -114,6 +114,7 @@ header h1 {
                margin: 0;
                font-size: 3rem;
 }
+
 /* header formatting. */
 header h2 {
                font-family: var(--font-title);
@@ -151,6 +152,7 @@ ul li {
                gap: 15px;
                min-width: 128px;
                text-align: center;
+               flex: 1 1 30%;
 }
 
 /* 1. get rid of link underlines.
@@ -167,9 +169,8 @@ ul li a {
 
 /* Hover over effect for links to show underline when hovered. */
 ul li a:hover {
-               border-bottom: 3px solid var(--color-coffee);
-               padding-bottom: 8px;
-
+               text-decoration: underline
+               
 }
 
 /*--------------MAIN------------ */
@@ -177,12 +178,12 @@ ul li a:hover {
     2. set a max width.
     3. set background color.
      */
-     main {
+main {
                color: var(--color-darkerpurple);
+               margin: 0 auto;
                border-right: 5px solid var(--color-lightcoffee);
                border-left: 5px solid var(--color-lightcoffee);
-               max-width: 1400px;
-               margin: 0 auto;
+               /* max-width: 1400px; */
 }
 
 /* style links inside of main. */
@@ -191,7 +192,7 @@ main a {
                color: var(--color-coffee);
 }
 
-/* hover underline effect. */
+/* hover underline effect and cause pointer cursor over link */
 main a:hover {
                text-decoration: underline;
                cursor: pointer;
@@ -223,22 +224,28 @@ main h2 {
                background-color: var(--color-lighticyblue);
                padding-top: 3%;
                padding-bottom: 5%;
+               overflow-x: hidden;
+               background-repeat: no-repeat;
+
 }
 
 /* Coffee cup placement in background with .1 opacity and absolute placement and z index so it is behind content.*/
-#about::before {
+/* #about::before {
                content: var(--coffee-cup);
                position: absolute;
-               top: 50%;
-               left: 55%;
-               opacity: 0.1;
+               top: 0;
+               left: 0;
+                opacity: 0.1;
                z-index: -1;
 
-}
+} */
+
 /* set size of title and background size of coffee bean.*/
 #about>section:nth-of-type(2) h2 {
-               width: 620px;
+               width: 100%;
                background-size: 45px;
+               max-width: 500px;
+
 }
 
 /* 1. set spacing for paragraphs in about section.
@@ -300,6 +307,7 @@ blockquote {
                background-color: var(--color-mayablue);
                padding: 10px 0;
                width: 220px;
+               max-width: 355px;
                border: 4px solid;
                border-image-slice: 50;
                border-image-source: url('https://media.istockphoto.com/id/2167328245/vector/coffee-bean-pattern-on-dark-brown-background-design.jpg?s=612x612&w=0&k=20&c=vtOzSz2wRXbi8YdXFh8--A69GokccWJlV-3KzWXHYy4=');
@@ -315,11 +323,12 @@ blockquote {
                text-align: center;
                padding-bottom: 0;
 }
+
 /* 1. space out the guidelines section.
     2. background style url design from heropatterns.com.
     3. border top and padding.
  */
- #guidelines {
+#guidelines {
                border-top: 5px solid var(--color-lightcoffee);
                padding: 3% 10%;
                background-color: var(--color-lightbabyblue);
@@ -329,12 +338,12 @@ blockquote {
 1.  background coffee shop image using absolute position and z index.
  */
 #contribute::before {
-               content: url('https://img.freepik.com/premium-photo/png-coffee-shop-doodle-illustration-transparent-background_53876-1043141.jpg?semt=ais_hybrid&w=740&q=80');
-               position: absolute;
+               background-image: url('https://img.freepik.com/premium-photo/png-coffee-shop-doodle-illustration-transparent-background_53876-1043141.jpg?semt=ais_hybrid&w=740&q=80');
                z-index: -1;
-               left: -12%;
-               opacity: .1;
-               mix-blend-mode: multiply;
+               background-size: 100%;
+               /* left: -12%; */
+               /* opacity: .1;
+               mix-blend-mode: multiply; */
 }
 
 /* 1. padding and bottom border to contribute section. */
@@ -369,6 +378,7 @@ blockquote {
                list-style-position: inside;
                margin-top: 1%;
 }
+
 /* set layout flex for footer under contribute.  */
 #files div {
                display: flex;
@@ -478,4 +488,118 @@ blockquote {
                text-align: center;
 
 
+}
+/*setup layout for features section.  */
+.features {
+               display: flex;
+               flex-direction: column;
+               gap: 20px;
+
+}
+
+/* style list items in features section. */
+.features li {
+               padding: 20px;
+               display: flex;
+               flex-direction: column;
+               gap: 20px;
+               list-style: none;
+               border: 10px solid var(--color-coffee);
+               background-color: var(--color-lightcoffee);
+}
+
+
+/* style the footer div container set background color. */
+.page-footer div {
+               background-color: var(--color-lightpurple);
+               padding: 2.5%;
+               border-top: 5px solid var(--color-darkerpurple);
+}
+/* setup layout for footer links. */
+.page-footer div ul {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: center;
+}
+/* get rid of bullet points in footer links. */
+.page-footer ul li {
+               list-style: none;
+}
+/* add style to footer links. */
+.page-footer ul a {
+               color: var(--color-darkerpurple);
+               font-size: 1.2rem;
+}
+
+/* center the footer text. */
+.page-footer p:last-child {
+text-align: center;
+}
+
+/* style the footer links. */
+.page-footer p a {
+               color: var(--color-coffee);
+}
+/* style the footer title. */
+.page-footer div p:first-child {
+               text-align: center;
+               font-size: 1.2rem;
+}
+/* style the footer text. */
+.page-footer p {
+               color: var(--color-lightcoffee);
+               font-weight: bold;
+               font-size: 1.1rem
+}
+
+/* 1.media query makes the about section and the features section go to flex row
+    2.query kicks in when screen shrinks smaller than 1300px.
+    3. links switch to 2 rows instead of one. */
+@media (min-width: 1300px) {
+               #about section:first-child {
+                              display: flex;
+                              flex-direction: row;
+                              flex-wrap: wrap;
+               }
+               #about section:first-child p {
+                              flex:1 1 40%;
+                              box-shadow: 10px 10px 10px var(--color-mayablue);
+
+               }
+               #about section:first-child blockquote {
+                              flex:1 1 40%;
+               }
+               #about section:first-child h2 {
+                              flex: 1 1 100%;
+                              text-align: center;
+                              background-position:38%
+               }
+               blockquote {
+                              margin-top: 0;
+               }
+               nav ul li {
+                              flex: 1 1 15%;
+               }
+               #about section:first-child p:nth-of-type(1) {
+                              margin-right: 0;
+                              box-shadow: none !important;
+               }
+               #about section:first-child p:nth-of-type(2)  {
+                              margin-left: 0;
+
+               }
+               #about section:first-child p:nth-of-type(3) {
+                              margin-left: 0;
+               }
+               #about blockquote {
+                              margin-right: 0;
+                              margin-bottom: 0;
+               }
+               .features {
+                              flex-direction: row;
+
+               }
+               .page-footer ul {
+
+               }
 }
