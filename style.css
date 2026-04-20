@@ -315,3 +315,57 @@ blockquote {
                text-align: center;
                padding-bottom: 0;
 }
+/* 1. space out the guidelines section.
+    2. background style url design from heropatterns.com.
+    3. border top and padding.
+ */
+ #guidelines {
+               border-top: 5px solid var(--color-lightcoffee);
+               padding: 3% 10%;
+               background-color: var(--color-lightbabyblue);
+               background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23b7d3f2' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+/*
+1.  background coffee shop image using absolute position and z index.
+ */
+#contribute::before {
+               content: url('https://img.freepik.com/premium-photo/png-coffee-shop-doodle-illustration-transparent-background_53876-1043141.jpg?semt=ais_hybrid&w=740&q=80');
+               position: absolute;
+               z-index: -1;
+               left: -12%;
+               opacity: .1;
+               mix-blend-mode: multiply;
+}
+
+/* 1. padding and bottom border to contribute section. */
+#contribute {
+               padding: 3% 10%;
+               border-bottom: 5px solid var(--color-lightcoffee);
+}
+
+/* margin and width of titles. */
+#guidelines h2,
+#contribute h2 {
+               margin-left: 0%;
+               width: 240px;
+
+}
+
+/* change font size of steps to contribute. */
+#contribute h3 {
+               font-size: 1.5rem;
+}
+
+/* add border and background color to steps to contribute section. */
+#contribute section:nth-of-type(2) {
+               padding: 3%;
+               background-color: var(--color-lightmayablue);
+               border: 3px solid var(--color-babyblue);
+}
+
+/* bring list number bullets into the content box and bold text.*/
+#contribute ol li {
+               font-weight: bold;
+               list-style-position: inside;
+               margin-top: 1%;
+}
