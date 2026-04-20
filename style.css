@@ -2,6 +2,7 @@
 /* mix-blend-mode /  https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mix-blend-mode. */
 /*background image generator / https://heropatterns.com/ */ 
 /* creating skip-link / https://css-tricks.com/how-to-create-a-skip-to-content-link/ */
+/* add background / https://css-tricks.com/absolute-positioning-inside-relative-positioning/ */
 
 
 /* import my main fonts. */
@@ -210,6 +211,7 @@ main a:hover {
     3. sizing and font styling of title.
     4. blend background of coffee bean image to match main background.
     -- got mix-blend-mode from https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/mix-blend-mode.
+
      */
 main h2 {
                font-family: var(--font-title);
