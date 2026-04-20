@@ -369,3 +369,113 @@ blockquote {
                list-style-position: inside;
                margin-top: 1%;
 }
+/* set layout flex for footer under contribute.  */
+#files div {
+               display: flex;
+               padding: 2%;
+               justify-content: space-between;
+               align-items: center;
+               flex-wrap: wrap;
+               max-height: 200px;
+
+}
+
+/* style source files title.*/
+#files div h3 {
+               background-color: var(--color-lightcoffee);
+               padding: 1%;
+               flex: 1;
+               border: 3px solid var(--color-coffee);
+               max-height: 65px;
+               text-wrap: nowrap;
+               text-align: center;
+
+
+}
+
+/* style source file link text alignment and background/border colors.*/
+#files div a {
+               background-color: var(--color-lightpurple);
+               padding: 2.1% 1%;
+               flex: 1;
+               text-align: center;
+               border: 2px solid var(--color-darkerpurple);
+               max-height: 65px;
+               flex-wrap: wrap;
+               text-wrap: nowrap;
+
+}
+
+/* format profile and styles aside sections. */
+.profile div,
+#styles div {
+               display: flex;
+               padding: 3%;
+               justify-content: center;
+               gap: 5%;
+               flex-direction: column;
+               align-items: center;
+
+}
+
+/* make list in styles a flex layout */
+#styles div ul {
+               display: flex;
+}
+
+/* get rid of bullet points in profile ul. */
+.profile div ul li {
+               list-style: none;
+}
+
+/* style the profile title and include a coffee cup bullet point */
+.profile h4 {
+               margin: auto;
+               text-align: center;
+               width: 380px;
+               font-size: 1.4rem;
+               background-image: url('https://www.svgrepo.com/show/151818/coffee-cup.svg');
+               background-size: 40px;
+               background-repeat: no-repeat;
+}
+/* style the title of the profile */
+.profile-title {
+               font-weight: bold;
+               background-color: var(--color-lightcoffee);
+               padding: 20px;
+               width: 200px;
+               margin: auto;
+}
+
+/* center links  */
+.profile a {
+               align-self: center;
+}
+
+/* hide span in profile. */
+.profile ul>span {
+               display: none;
+}
+/* add backgrouand image and 
+.profile {
+               background-image: url('https://img.freepik.com/premium-photo/png-coffee-shop-doodle-illustration-transparent-background_53876-1043141.jpg?semt=ais_hybrid&w=740&q=80');
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: 35%;
+               background-position: left;
+               background-color: var(--color-lighticyblue);
+               background-blend-mode: multiply;
+} */
+
+
+/* title for styles section and coffee cup bulletin */
+#styles h2 {
+               font-size: 1.5rem;
+               background-image: url('https://www.svgrepo.com/show/151818/coffee-cup.svg');
+               background-size: 40px;
+               background-repeat: no-repeat;
+               width: 300px;
+               text-align: center;
+
+
+}
