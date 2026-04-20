@@ -229,6 +229,7 @@ main h2 {
 /*set background and padding of section. */
 #about {
                background-color: var(--color-lighticyblue);
+               position: relative;
                padding-top: 3%;
                padding-bottom: 5%;
                overflow-x: hidden;
@@ -236,8 +237,8 @@ main h2 {
 
 }
 
-/* Coffee cup placement in background with .1 opacity and absolute placement and z index so it is behind content.*/
-/* #about::before {
+/* Coffee cup placement in background with .1 opacity and absolute placement and z index so it is behind content.*/ 
+ #about::before {
                content: var(--coffee-cup);
                position: absolute;
                top: 0;
@@ -245,7 +246,7 @@ main h2 {
                 opacity: 0.1;
                z-index: -1;
 
-} */
+}
 
 /* set size of title and background size of coffee bean.*/
 #about>section:nth-of-type(2) h2 {
